@@ -3,13 +3,7 @@ from scipy.spatial.distance import pdist, squareform
 from my_kmeans import my_kmeans
 
 def my_spectralclustering(data, K, sigma):
-    """
-    Spectral clustering algorithm.
-    :param data: N x d numpy array
-    :param K: number of clusters
-    :param sigma: bandwidth for Gaussian kernel
-    :return: N-dimensional clustering result label
-    """
+
     N = data.shape[0]
     
     sq_dists = squareform(pdist(data, 'sqeuclidean'))
